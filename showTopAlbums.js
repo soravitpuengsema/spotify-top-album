@@ -1,10 +1,7 @@
 function showTopAlbums(topAlbums) {
   return `
-    <svg width="800" height="336" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <style type="text/css">@import url('http://fonts.googleapis.com/css?family=Montserrat:wght@200;300;400;500;600;700');</style>
-      </defs>
-      <foreignObject width="800" height="336">
+    <svg width="800" height="338" xmlns="http://www.w3.org/2000/svg">
+      <foreignObject width="800" height="338">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <style>
             .container {
@@ -14,7 +11,8 @@ function showTopAlbums(topAlbums) {
               padding: 20px;
               border-radius: 6px;
               border: 1px solid white;
-              font-family: 'Montserrat', sans-serif;
+              font-family: Segoe UI, Ubuntu, sans-serif;
+              font-style: normal;
             }
             .album-item {
               display: flex;
@@ -25,7 +23,7 @@ function showTopAlbums(topAlbums) {
               font-weight: 700;
               font-size: 16px;
               text-align: center;
-              margin-top: 12px;
+              margin-top: 10px;
               margin-bottom: 0px;
             }
             .artist {
