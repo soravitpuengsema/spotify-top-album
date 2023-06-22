@@ -9,8 +9,8 @@ function showTopAlbums(topAlbums) {
               display: flex;
               justify-content: space-between;
               padding: 20px;
-              border-radius: 6px;
-              border: 1px solid white;
+              border-radius: 5px;
+              border: 1px solid #E4E2E2;
               font-family: Segoe UI, Ubuntu, sans-serif;
               font-style: normal;
             }
