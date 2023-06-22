@@ -1,16 +1,16 @@
 function showTopAlbums(topAlbums) {
   return `
-    <svg width="700" height="304" xmlns="http://www.w3.org/2000/svg">
-      <foreignObject width="700" height="304">
+    <svg width="800" height="332.13" xmlns="http://www.w3.org/2000/svg">
+      <foreignObject width="800" height="332.13">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <style>
             .container {
               background-color: #121212;
               display: flex;
               justify-content: space-between;
-              padding: 24px;
-              border-radius: 20px;
-              font-family: sans-serif;
+              padding: 20px;
+              border-radius: 24px;
+              font-family: Garamond, sans-serif;
             }
             .album-item {
               display: flex;
@@ -21,14 +21,14 @@ function showTopAlbums(topAlbums) {
               font-weight: bold;
               font-size: 16px;
               text-align: center;
-              margin-top: 7px;
+              margin-top: 9px;
               margin-bottom: 2px;
             }
             .artist {
               color: #b3b3b3;
               font-size: 14px;
               text-align: center;
-              margin-top: 0px;
+              margin-top: 4px;
               margin-bottom: 0px;
             }
           </style>
@@ -38,7 +38,7 @@ function showTopAlbums(topAlbums) {
                 (album) => `
                 <div class="album-item">
                   <a href="${album[5]}">
-                    <img style="width:200px" src="${album[0]}" />
+                    <img style="width:240px" src="${album[0]}" />
                   </a>
                   <div class="text">
                     <p class="album">${album[1]}</p>
