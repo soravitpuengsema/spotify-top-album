@@ -1,7 +1,7 @@
 # spotify-top-albums
 show Spotfy most played albums on Github readme profile.
 
-by getting user's Top 50 and sort album with the most tracks. (Like Collageify)
+by getting user's Top 50 and sort album with the most tracks. (like Collageify)
 
 using Express and Vercel.
 
@@ -11,13 +11,12 @@ https://spotify-top-album.vercel.app/api/top-3-albums
 
 inspired by:
 
-https://github.com/natemoo-re/natemoo-re
+- https://github.com/natemoo-re/natemoo-re/pull/25 (my pull request)
+- https://github.com/kittinan/spotify-github-profile
 
-from this pull request by myself: https://github.com/natemoo-re/natemoo-re/pull/25
-
-https://github.com/kittinan/spotify-github-profile
-
-### Future goals...
-- Show one album per image for more flexibility
-- Click redirect to spoitfy album url
-- More design
+## 🎯Future goals...
+- Show one album per image for more flexibility 
+- Click: redirect to Spoitfy album URL
+- Better looking and more design
+- Animation
+- Setup guide in README
