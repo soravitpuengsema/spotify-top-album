@@ -14,9 +14,10 @@ inspired by:
 - https://github.com/natemoo-re/natemoo-re/pull/25 (my pull request)
 - https://github.com/kittinan/spotify-github-profile
 
-## 🎯Future goals...
+## 🎯Future goals
+- Spotify-like font for text
 - Show one album per image for more flexibility 
-- Click: redirect to Spoitfy album URL
+- Click -> redirect to Spoitfy album URL
 - Better looking and more design
 - Animation
 - Setup guide in README
