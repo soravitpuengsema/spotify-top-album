@@ -54,10 +54,9 @@ async function getTopAlbums() {
   const albumSpotifyUrls = items.map(
     (item) => item.album.external_urls.spotify
   );
-  console.log(albumSpotifyUrls);
   //array contains track count of the album
   const albumTrackCounts = {};
-  albumNames.forEach(function (x) {
+  albumSpotifyUrls.forEach(function (x) {
     albumTrackCounts[x] = (albumTrackCounts[x] || 0) + 1;
   });
 
@@ -71,15 +70,15 @@ async function getTopAlbums() {
   });
 
   //remove duplicates (tracks from the same album) and match album value from the same index
-  const uniqueAlbum = [...new Set(albumNames)];
+  const uniqueAlbum = [...new Set(albumSpotifyUrls)];
   const albumInfo = uniqueAlbum.reduce((obj, key) => {
-    const index = albumNames.lastIndexOf(key);
+    const index = albumSpotifyUrls.lastIndexOf(key);
     obj[Object.keys(obj).length + 1] = [
       key,
+      albumNames[index],
       artistNames[index],
       albumYears[index],
       albumImages[index],
-      albumSpotifyUrls[index],
     ];
     return obj;
   }, {});
@@ -87,18 +86,26 @@ async function getTopAlbums() {
   //if albumName match the album name from albumInfo, append the other value
   for (let i = 0; i < albumSorts.length; i++) {
     //
-    const albumName = albumSorts[i][0];
-    for (const key in albumInfo) {
-      if (albumInfo.hasOwnProperty(key) && albumInfo[key][0] === albumName) {
+    let albumSpotifyUrl = albumSorts[i][0];
+    for (let key in albumInfo) {
+      if (
+        albumInfo.hasOwnProperty(key) &&
+        albumInfo[key][0] === albumSpotifyUrl
+      ) {
         albumSorts[i] = albumInfo[key];
         break;
       }
     }
   }
-  const topAlbums = [];
 
-  for (let i = 1; i < 4; i++) {
-    let cover = albumSorts[i - 1][3][0]?.url;
+  //get top 3 albums info
+  const topAlbums = [];
+  for (let i = 0; i < 3; i++) {
+    let albumSpotifyUrl = albumSorts[i][0];
+    let albumName = albumSorts[i][1];
+    let albumArtist = albumSorts[i][2];
+    let albumYear = albumSorts[i][3];
+    let cover = albumSorts[i][4][0]?.url;
     let coverImg = null;
     if (cover) {
       let buff = await (await fetch(cover)).arrayBuffer();
@@ -106,11 +113,6 @@ async function getTopAlbums() {
         "base64"
       )}`;
     }
-
-    let albumName = albumSorts[i - 1][0];
-    let albumArtist = albumSorts[i - 1][1];
-    let albumYear = albumSorts[i - 1][2];
-    let albumSpotifyUrl = albumSorts[i - 1][4];
 
     topAlbums.push([
       coverImg,
