@@ -66,7 +66,7 @@ function showTopAlbums(topAlbums) {
               .map(
                 (album, index) => `
                 <div class="album-item">
-                  <a href="${album[5]}">
+                  <a href="${album[4]}">
                     <img class="cover" style="width:240px;height:240px;animation-delay: ${
                       index * 0.5 + 0.15
                     }s" src="${album[0]}" />
