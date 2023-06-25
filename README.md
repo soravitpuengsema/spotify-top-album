@@ -19,9 +19,7 @@ inspired by:
 
 ⬜ Spotify-like font for text
 
-⬜ Show one album per image for more flexibility 
-
-⬜ Click -> redirect to Spoitfy album URL
+⬜ New Design: Music player style
 
 ⬜ Better looking and more design
 
