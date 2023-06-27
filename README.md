@@ -15,12 +15,12 @@ inspired by:
 - https://github.com/kittinan/spotify-github-profile
 
 ## 🎯Future goals
-✅ Animation
+- Animation :white_check_mark:
 
-⬜ Spotify-like font for text
+- Spotify-like font for text
 
-⬜ New Design: Music player style
+- New Design - Music player style
 
-⬜ Better looking and more design
+- Better looking and more design
 
-⬜ Setup guide in README
+- Setup guide in README
