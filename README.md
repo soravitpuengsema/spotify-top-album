@@ -1,7 +1,7 @@
 # spotify-top-albums
 show Spotfy most played albums on Github readme profile.
 
-by getting user's Top 50 and sort album with the most tracks. (like Collageify)
+by getting user's Top 30 and sort album with the most tracks. (like Collageify)
 
 using Express and Vercel.
 
@@ -14,10 +14,18 @@ inspired by:
 - https://github.com/natemoo-re/natemoo-re/pull/25
 - https://github.com/kittinan/spotify-github-profile
 
+### Run with nodemon for auto-refresh when develop
+```
+npm i nodemon --save-dev
+```
+```
+npx nodemon index.js
+```
+
 ## 🎯Future goals
 - Animation :white_check_mark:
 
-- Spotify-like font for text
+- Spotify-like font for text :white_check_mark:
 
 - New Design - Music player style
 
