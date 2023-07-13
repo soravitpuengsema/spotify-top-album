@@ -1,7 +1,7 @@
 # spotify-top-albums
-show Spotfy most played albums on Github readme profile.
+show your Spotfy most played albums on Github README profile.
 
-by getting user's Top 30 and sort album with the most tracks. (like Collageify)
+by getting user's Top 30 and sort album by most tracks. (like Collageify)
 
 using Express and Vercel.
 
