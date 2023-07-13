@@ -25,7 +25,7 @@ async function getAuthorizationToken() {
 async function getTopTracks() {
   const Authorization = await getAuthorizationToken();
   const response = await fetch(
-    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50",
+    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=30",
     {
       headers: {
         Authorization,
@@ -60,6 +60,8 @@ async function getTopAlbums() {
     albumTrackCounts[x] = (albumTrackCounts[x] || 0) + 1;
   });
 
+  // console.log(albumNames);
+
   //sort albumTrackCounts by track count
   let albumSorts = [];
   for (let name in albumTrackCounts) {
@@ -68,6 +70,8 @@ async function getTopAlbums() {
   albumSorts.sort(function (a, b) {
     return b[1] - a[1];
   });
+
+  console.log(albumSorts);
 
   //remove duplicates (tracks from the same album) and match album value from the same index
   const uniqueAlbum = [...new Set(albumSpotifyUrls)];
