@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const { getTopAlbums } = require("../getSpotifyData");
-const { Top3Github } = require("../Top3Github");
+const { Top1Vinyl } = require("../Top1Vinyl");
 router.get("/", async (req, res) => {
   try {
     //get top 3 album info
-    const topAlbums = await getTopAlbums(3);
-    const show = Top3Github(topAlbums);
+    const topAlbums = await getTopAlbums(1);
+    const show = Top1Vinyl(topAlbums[0]);
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");

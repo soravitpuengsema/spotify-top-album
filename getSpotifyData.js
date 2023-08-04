@@ -33,7 +33,7 @@ async function getTopTracks() {
     }
   );
   const { status } = response;
-  console.log(status);
+  // console.log(status);
   if (status === 204) {
     return null;
   } else if (status === 200) {
@@ -42,7 +42,7 @@ async function getTopTracks() {
   }
 }
 
-async function getTopAlbums() {
+async function getTopAlbums(number) {
   const items = await getTopTracks();
   //map each value to each array
   const albumNames = items.map((item) => item.album.name);
@@ -104,7 +104,8 @@ async function getTopAlbums() {
 
   //get top 3 albums info
   const topAlbums = [];
-  for (let i = 0; i < 3; i++) {
+  console.log("Getting " + number + " albums...");
+  for (let i = 0; i < number; i++) {
     let albumSpotifyUrl = albumSorts[i][0];
     let albumName = albumSorts[i][1];
     let albumArtist = albumSorts[i][2];

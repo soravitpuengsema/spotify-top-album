@@ -1,4 +1,4 @@
-function showTopAlbums(topAlbums) {
+function Top3Github(topAlbums) {
   return `
     <svg width="800" height="338" xmlns="http://www.w3.org/2000/svg">
       <foreignObject width="800" height="338">
@@ -94,4 +94,4 @@ function showTopAlbums(topAlbums) {
   `;
 }
 
-module.exports = { showTopAlbums };
+module.exports = { Top3Github };
