@@ -11,10 +11,9 @@ https://spotify-top-album.vercel.app/api/top-3-albums
 <img src="https://spotify-top-album.vercel.app/api/top-1-album-player" width="300">
 <img src="https://spotify-top-album.vercel.app/api/top-1-album-vinyl" width="400">
 
-inspired by:
+### Additional Tools
 
-- https://github.com/natemoo-re/natemoo-re/pull/25
-- https://github.com/kittinan/spotify-github-profile
+- Convert image to Base64 string https://www.base64-image.de/
 
 ### Run with nodemon for auto-refresh when develop
 ```
@@ -25,9 +24,9 @@ npx nodemon index.js
 ```
 
 ## 🎯Future goals
-- Animation :white_check_mark:
+- Animation
 
-- Spotify-like font for text :white_check_mark:
+- Spotify-like font for text
 
 - New Design - Music player style
 
