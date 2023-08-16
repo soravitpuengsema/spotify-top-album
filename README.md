@@ -7,9 +7,9 @@ using Express and Vercel.
 
 https://spotify-top-album.vercel.app/api/top-3-albums
 
-<img src="https://spotify-top-album.vercel.app/api/top-3-albums" width="800">
-<img src="https://spotify-top-album.vercel.app/api/top-1-album-player" width="300">
-<img src="https://spotify-top-album.vercel.app/api/top-1-album-vinyl" width="400">
+<img src="https://spotify-top-album.vercel.app/api/three-github" width="800">
+<img src="https://spotify-top-album.vercel.app/api/one-player" width="300">
+<img src="https://spotify-top-album.vercel.app/api/one-vinylplayer" width="400">
 
 ### Additional Tools
 
