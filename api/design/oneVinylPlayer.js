@@ -48,7 +48,7 @@ function oneVinylPlayer(album) {
             .album {
               color: #000000;
               font-weight: 700;
-              font-size: 17px;
+              font-size: 18px;
               text-align: center;
               line-height: 20px;
               margin: 6px 0 0 0;
@@ -56,7 +56,7 @@ function oneVinylPlayer(album) {
             .artist {
               font-weight: 400;
               color: #000000;
-              font-size: 14px;
+              font-size: 15px;
               text-align: center;
               line-height: 18px;
               margin-top: 6px;
