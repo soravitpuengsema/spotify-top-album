@@ -5,9 +5,9 @@ const Top1AlbumPlayer = require("./api/Top1AlbumPlayer");
 const Top1AlbumVinyl = require("./api/Top1AlbumVinyl");
 
 app.use(express.json({ extended: false }));
-app.use("/api/top-3-albums", Top3Albums);
-app.use("/api/top-1-album-player", Top1AlbumPlayer);
-app.use("/api/top-1-album-vinyl", Top1AlbumVinyl);
+app.use("/api/three-github", Top3Albums);
+app.use("/api/one-player", Top1AlbumPlayer);
+app.use("/api/one-vinylplayer", Top1AlbumVinyl);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8085;
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));

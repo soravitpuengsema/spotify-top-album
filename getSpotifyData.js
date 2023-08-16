@@ -71,7 +71,7 @@ async function getTopAlbums(number) {
     return b[1] - a[1];
   });
 
-  console.log(albumSorts);
+  // console.log(albumSorts);
 
   //remove duplicates (tracks from the same album) and match album value from the same index
   const uniqueAlbum = [...new Set(albumSpotifyUrls)];
