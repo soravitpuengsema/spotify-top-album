@@ -1,25 +1,25 @@
-const plinthImage = require("../../asset/plinth.js");
-function threeVinylPlayer(album) {
+const plinthImage = require("../../asset/plinth.js")
+function fourVinylPlayer(album) {
   return `
-    <svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+    <svg width="635" height="375" xmlns="http://www.w3.org/2000/svg">
       <style>
         .background-github {
           background-color: #0D1117;
-          height: 400px;
-          width: 650px;
+          height: 375px;
+          width: 635px;
         }
         .post-it {
           width:220px;
           height:80px;
           position:absolute;
-          top: 225px;
-          left: 155px;
-          transform: rotate(-12deg);
+          top: 220px;
+          left: 100px;
+          transform: rotate(-8deg);
           z-index: 101;
           background:#ffa;
           overflow:hidden;
           margin:30px auto;
-          padding:20px;
+          padding:14px;
           border-radius: 0px 4px 1px 30px/45px;
           box-shadow:
             inset 0 -40px 50px rgba(0,0,0,0.2),
@@ -47,15 +47,15 @@ function threeVinylPlayer(album) {
         .album {
           color: #000000;
           font-weight: 700;
-          font-size: 18px;
+          font-size: 16px;
           text-align: center;
           line-height: 20px;
           margin: 6px 0 0 0;
         }
         .artist {
           font-weight: 400;
-          color: #000000;
-          font-size: 15px;
+          color: #464646;
+          font-size: 13px;
           text-align: center;
           line-height: 18px;
           margin-top: 6px;
@@ -63,16 +63,16 @@ function threeVinylPlayer(album) {
         .record-player {
           position: absolute;
           z-index: 10;
-          width: 360px;
-          height: 300px;
+          width: 340px;
+          height: 280px;
         }
         .plinth {
           z-index: 10;
           background-image: url('${plinthImage}');
           background-blend-mode: soft-light;
-          background-color: #724600;
-          width: 360px;
-          height: 300px;
+          background-color: #8f5800;
+          width: 340px;
+          height: 280px;
           border-radius: 30px;
         }
         .knob {
@@ -83,7 +83,7 @@ function threeVinylPlayer(album) {
           position: absolute;
           background-color: #000000;
           top: 202px;
-          left: 289px;
+          left: 279px;
           z-index: 10;
         }
         .knob:before {
@@ -99,8 +99,8 @@ function threeVinylPlayer(album) {
         .platter {
           position: absolute;
           border-radius: 50%;
-          width: 256px;
-          height: 256px;
+          width: 236px;
+          height: 236px;
           background-color: #222222;
           z-index:5;
           top:22px;
@@ -109,8 +109,8 @@ function threeVinylPlayer(album) {
         .vinyl {
           position: absolute;
           border-radius:50%;
-          width:250px;
-          height:250px;
+          width:230px;
+          height:230px;
           z-index:6;
           top:25px;
           left:25px;
@@ -124,7 +124,7 @@ function threeVinylPlayer(album) {
           border-bottom: 10px solid #353535;
           border-bottom-right-radius: 50px;
           z-index:15;
-          left: 250px;
+          left: 240px;
           top: 20px;
           transform: rotate(23deg);
           box-shadow: 2px 2px 3px rgba(0,0,0,.4);
@@ -181,20 +181,29 @@ function threeVinylPlayer(album) {
           position: absolute;
           width: 200px;
           height: 200px;
-          left: 300px;
+          left: 335px;
           top: 30px;
           box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-          transform: translate(25px, 0px) rotate(-10deg);
+          transform: translate(25px, 0px) rotate(-8deg);
         }
         .album-cover-2 {
           position: absolute;
           width: 200px;
           height: 200px;
-          left: 350px;
-          top: 30px;
+          left: 355px;
+          top: 40px;
           box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
           transform: translate(65px, 80px) rotate(7deg);
         }
+				.album-cover-3 {
+					position: absolute;
+					width: 200px;
+					height: 200px;
+					left: 295px;
+					top: -100px;
+					box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+					transform: translate(105px, 160px) rotate(-1deg);
+				}
         .rotate {
           animation: loading 16s linear infinite;
         }
@@ -231,16 +240,19 @@ function threeVinylPlayer(album) {
               <span>${album[0][3]}</span>
             </p>
           </div>
+					<a href="${album[3][4]}">
+						<img class="album-cover-3" src="${album[3][0]}" />
+					</a>
           <a href="${album[2][4]}">
               <img class="album-cover-2" src="${album[2][0]}" />
-            </a>
-            <a href="${album[1][4]}">
-              <img class="album-cover-1" src="${album[1][0]}" />
-            </a>
+					</a>
+					<a href="${album[1][4]}">
+						<img class="album-cover-1" src="${album[1][0]}" />
+					</a>
         </div>
       </foreignObject>
     </svg>
-  `;
+  `
 }
 
-module.exports = { threeVinylPlayer };
+module.exports = { fourVinylPlayer }

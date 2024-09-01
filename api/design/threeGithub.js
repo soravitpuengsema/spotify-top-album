@@ -1,7 +1,7 @@
 function threeGithub(topAlbums) {
   return `
-    <svg width="800" height="338" xmlns="http://www.w3.org/2000/svg">
-      <foreignObject width="800" height="338">
+    <svg width="800" height="349" xmlns="http://www.w3.org/2000/svg">
+      <foreignObject width="800" height="349">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <style>
             .container {
@@ -17,6 +17,7 @@ function threeGithub(topAlbums) {
             .album-item {
               display: flex;
               flex-direction: column;
+							align-items: center;
             }
             .cover {
               opacity: 0;
@@ -25,8 +26,8 @@ function threeGithub(topAlbums) {
             .album {
               opacity: 0;
               color: #F9F9F9;
-              font-weight: 700;
-              font-size: 16px;
+              font-weight: 600;
+              font-size: 15px;
               text-align: center;
               margin-top: 10px;
               margin-bottom: 0px;
@@ -91,7 +92,7 @@ function threeGithub(topAlbums) {
         </div>
       </foreignObject>
     </svg>
-  `;
+  `
 }
 
-module.exports = { threeGithub };
+module.exports = { threeGithub }
